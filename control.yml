@@ -1,8 +1,4 @@
 ---
-  - hosts: Marks-MBP
-    become: true
-    tasks:
-      - name: Install tools
-        apt: name={{item}} state=present update_cache=yes
-        with_items:
-          - curl
+- hosts: control
+  roles:
+    - control

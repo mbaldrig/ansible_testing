@@ -1,0 +1,10 @@
+---
+- name: Install brew tools
+  homebrew: name={{item}} state=present update_homebrew=yes
+  with_items:
+    - curl
+
+- name: Install pip tools
+  pip: name={{item}} state=present
+  with_items:
+    - httplib2
